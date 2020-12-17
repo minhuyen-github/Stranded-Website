@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+    Author: Uyen Hoang.
+    This is the HTML file to build the structure of the website for UCOM company.
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Glitch-Stranded</title>
+        <link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+
+    <body>
+        <div id="nav_shadow" class="hidden"></div>
+        <nav id="main_nav">
+            <div id="nav_background" class="hidden"></div>
+            <a href="#about">About</a>
+            <a href="#media">Game Media</a>
+            <a href="#process">Game Making Process</a>
+            <a href="#creators">Game Creators</a>
+            <a href="http://students.washington.edu/graclyn/" rel="noopener" target="_blank">Play Game!</a>
+        </nav>
+
+        <header class="parallax">
+            <div id="header_text">
+                <h1><span id="intro"></span><span id="cursor">|</span></h1>
+            </div>
+        </header>
+
+        <section class="content">
+            <a class="anchor_link" id="about"></a>
+            <article>
+                <h1>About</h1>
+                <p>A scientist is stucked in the Ancient Egypt era because his time machine is missing pieces. The only way for him to return back to his original timeline is to solve the puzzles and collect the missing parts. Once all the parts has been found, he can fix his machine to go back home!</p>
+                <aside id="slideshow">
+                    <div id="inner_slide">
+                        <a id="prev">&#10094;</a>
+                        <div class="slide">
+                            <img src="img/demo.png" alt="Demo">
+                        </div>
+                        <div class="slide">
+                            <img src="img/alpha.png" alt="Alpha">
+                        </div>
+                        <div class="slide">
+                            <img src="img/beta.png" alt="Beta">
+                        </div>
+                        <div class="slide">
+                            <img src="img/hard.jpg" alt="Hard mode">
+                        </div>
+                        <a id="next">&#10095;</a>
+                    </div>
+
+                    <div id="dot_slide">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </aside>
+            </article>
+        </section>
+
+        <section class="parallax" id="vid"></section>
+
+        <section class="content">
+            <a class="anchor_link" id="media"></a>
+            <article>
+                <h1>The game trailer that we want to share with the world</h1>
+            </article>
+        </section>
+
+        <section class="parallax" id="making"></section>
+
+        <section class="content">
+            <a class="anchor_link" id="process"></a>
+            <article>
+                <h1>The game making process</h1>
+                <ul>
+                    <p>First week - Brainstorming time! </p>
+                    <ul>
+                        <li>Each member propose their own game idea, and vote for their favorite one. The most voted idea will be used.</li>
+                        <li>We discuss about the game environment, the art styles, the player movement, and the implementation of the puzzles.</li>
+                        <li>Writing and editing the game design document to demonstrate our ideas.</li>
+                    </ul>
+                    <p>Second week - Prototyping</p>
+                    <ul>
+                        <li>Player movement and animation</li>
+                        <li>Pushing boxes mechanics</li>
+                        <li>Auto-generating puzzles for each level</li>
+                        <li>Archieving the time machine pieces</li>
+                        <li>Displaying the archived pieces</li>
+                        <li>Interaction with the time machine</li>
+                        <li>Trap damaging the player</li>
+                    </ul>
+                    <p>Third week - Rough Demo</p>
+                    <ul>
+                        <li>We have created sprites for our game.</li>
+                        <li>We have developed an algorithm to create random puzzles from scratch. However, it causes a very long loading time. Thus, we decided to use existed puzzles in the form of .txt file, then randomly select a puzzle to generate our levels.</li>
+                    </ul>
+                    <p>Fourth week - Alpha Play Testing</p>
+                    <ul>
+                        <li>All prototypes are merged into a main scene.</li>
+                        <li>We have also added more components: a health bar, a main menu, a pause menu, and a reset button.</li>
+                        <li>If the player gets hurt, the character will flash three times.</li>
+                    </ul>
+                    <p>Fifth week - Beta Play Testing</p>
+                    <ul>
+                        <li>Thank you so much for everyone's honest feedbacks. They are very important to us as they helps us improve our game. Here are the updates:</li>
+                        <ol>
+                            <li>After finishing 3 levels, the player will be returned to the main room.</li>
+                            <li>The player need to press a key to move to the next room.</li>
+                            <li>Different sprite for the goal to make them more obvious.</li>
+                            <li>Animation when the player collect a piece.</li>
+                            <li>Music for the game!</li>
+                            <li>Credits, tutorials, sounds setting are added</li>
+                            <li>Box will sink to the floor when it's on a goal.</li>
+                            <li>The game over panel is not gonna show up!</li>
+                        </ol>
+                    </ul>
+                    <p>Sixth week - Retro talk</p>
+                    <ol>
+                        <li>This is our retro talk presentation:</li>
+                        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQbKFISfTzEBcXsw4wniMK8iQxOVd82Ky2gFW_Vi9HriK8ulDQYP47CYIK2Hy5gI7kex8I8Ox6v36P6/embed?start=true&loop=false&delayms=3000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    </ol>
+                    <p>Seventh week - Final Play Testing</p>
+                    <ul>
+                        <li>We want to thank again for those that fill out our survey, and provided us detailed feedbacks. Here are the updates:</li>
+                        <ol>
+                            <li>Easy and hard modes are out now!</li>
+                            <li>In the easy mode, the box will sink to the floor when it's on a goal, and you can push many boxes at a time! You can also push them through the traps! If you dies, your solving progress will be saved.</li>
+                            <li>In the hard mode, you can only push one box at a time, and you cannot push it through the traps. The box won't sink to the floor like it does in easy mode! And remember to watch out for the poison box as it will hurt you! If you dies, a new game with new puzzles starts!</li>
+                            <li>There will be a hurt sound when the player is damaged by the trap.</li>
+                            <li>More levels are added!</li>
+                            <li>Variations of floor and wall sprites! More arts!</li>
+                            <li>New! Added a story prompt</li>
+                            <li>Reset button will not reset the player's health.</li>
+                        </ol>
+                    </ul>
+                    <p>Last week - Wrapping up</p>
+                    <ol>
+                        <li>Create a trailer and a website for our game.</li>
+                        <li>Edit the game design document.</li>
+                        <li>Shift our game!</li>
+                    </ol>
+                </ul>
+            </article>
+        </section>
+
+        <section class="parallax" id="credit"></section>
+
+        <section id="creators">
+            <h1>Game Creators</h1>
+            <div id="creator">
+                <div class="show_creator">
+                    <img src="img/grace.jpg" alt="Grace Nelson">
+                </div>
+                <div class="show_creator">
+                    <img src="img/uyen.jpg" alt="Uyen Hoang">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright &#169; 2020, <a href="#creators">Glitch</a></p>
+        </footer>
+    </body>
+
+</html>

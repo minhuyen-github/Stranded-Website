@@ -1,0 +1,404 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/background.jpg");
+  align-items: center;
+}
+
+#header_text {
+  padding-left: 28%;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+#inner_slide {
+  max-width: 1800px;
+  position: relative;
+  margin: auto;
+  left: -252px;
+}
+
+.slide > img {
+  height: 500px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.invisible {
+  display: none;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size:60px;
+}
+
+p {
+  font-size: 22px;
+}
+
+ul, li {
+  font-size: 20px;
+}
+
+a {
+  color: black;
+}
+
+nav {
+  z-index: 4;
+  height: 70px;
+  width: 100%;
+  padding-left: 20%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+nav > a {
+  height: 100%;
+  padding: 0 10px 0 10px;
+  color: white;
+  mix-blend-mode: difference;
+  display: inline-block;
+  line-height: 70px;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+#nav_background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  top: 92px;
+}
+
+#nav_background:before {
+  background-color: white;
+  top: 0;
+  content: '';
+  display: block;
+  height: 210px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-2deg);
+  transform-origin: 0% 0%;
+  z-index: -3;
+}
+
+#nav-shadow {
+  box-shadow: 0 4px 5px -5px black;
+  height: 70px;
+  width: 150%;
+  position: fixed;
+  z-index: 3;
+  left: 0px;
+}
+
+.default-nav > a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.default-nav {
+  background-color: white;
+}
+
+section {
+  padding: 0 20%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+section > nav > a {
+  color: black;
+}
+
+article, aside {
+  width: 50%;
+}
+
+article h1, aside h1 {
+  text-align: center;
+}
+
+iframe {
+  display: block;
+	text-align: middle;
+	padding-left: 10px;
+  margin: 10px 10px;
+  margin: 0 auto;
+}
+
+.header_text {
+  position: relative;
+}
+
+.header_text > h1:first-child {
+  position: absolute;
+}
+
+.header_text > a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 0 5px black;
+}
+
+.parallax {
+  height: 600px;
+  background-position: center;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+.content:before {
+  background: inherit;
+  top: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-2deg);
+  transform-origin: 0;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 50px;
+}
+
+.content:after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-2deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.content:last-child:after {
+  display: none;
+}
+
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #222428;
+  font-weight: bold;
+  font-size: 30px;
+  transition: .6s ease;
+  border-radius: 0 3px 3px 0
+}
+
+#next {
+  right: -50px;
+  border-radius: 3px 3px 3px 3px
+}
+
+#prev {
+  left: -50px;
+  border-radius: 3px 3px 3px 3px
+}
+
+#prev:hover, #next:hover {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.8)
+}
+
+#slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#dot_slide {
+  text-align: center;
+}
+
+#creators {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 140px;
+}
+
+#creator {
+  display: flex;
+}
+
+.show_creator {
+  padding-left: 100px;
+  position: relative;
+  height: 260px;
+  width: 238px;
+  padding-left: 28px;
+  padding-right: 28px;
+  float: left;
+}
+
+.show_creator img {
+  height: 200px;
+  width: 200px;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer a {
+  color: rgb(255,255,0);
+  text-decoration: none;
+}
+
+nav, footer {
+  font-family: 'Raleway', sans-serif;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color .6s ease
+}
+
+.active, .dot:hover {
+  background-color: #717171
+}
+
+/* Link for the images:
+ * https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thecollector.com%2F16-things-you-may-not-know-about-ancient-egypt%2F&psig=AOvVaw1z6Ml2qpWKEBwEWheKPe2B&ust=1608267112699000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCPjb3-ed1O0CFQAAAAAdAAAAABAD
+ * https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nytimes.com%2F2019%2F11%2F16%2Fscience%2Fmummies-ibises-ancient-egypt.html&psig=AOvVaw1z6Ml2qpWKEBwEWheKPe2B&ust=1608267112699000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCPjb3-ed1O0CFQAAAAAdAAAAABAK
+ * https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nms.ac.uk%2Fexplore-our-collections%2Fstories%2Fworld-cultures%2Fancient-egyptian-collection%2Fancient-egyptian-collection%2Fancient-egypt-across-scotland%2F&psig=AOvVaw1z6Ml2qpWKEBwEWheKPe2B&ust=1608267112699000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCPjb3-ed1O0CFQAAAAAdAAAAABAR
+ */
+#vid {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/egypt1.jpg");
+  background-position: top;
+}
+
+#making {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/egypt2.jpg");
+  background-position: top;
+}
+
+#credit {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/egypt3.jpg");
+  background-position: top;
+}
+
+.blinking_cursor {
+  -webkit-animation: 1.5s blink step-end infinite;
+  -moz-animation: 1.5s blink step-end infinite;
+  -ms-animation: 1.5s blink step-end infinite;
+  -o-animation: 1.5s blink step-end infinite;
+  animation: 1.5s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
