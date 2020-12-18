@@ -275,6 +275,9 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#creators h1 {
   margin-left: 140px;
 }
 
@@ -295,6 +298,29 @@ iframe {
 .show_creator img {
   height: 200px;
   width: 200px;
+}
+
+.show_creator:hover .link {
+  visibility: visible;
+  opacity: 1;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  bottom: 20;
+  left: 5;
+  right: 5;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  height: 100px;
+  width: 200px;
+  font-size: 35px;
+  text-align: center;
+  font-family: Courier, monospace;
+  transition: opacity .2s, visibility .2s;
 }
 
 footer {
